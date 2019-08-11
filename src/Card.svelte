@@ -4,22 +4,31 @@
   export let title;
   export let unit;
 
+  let value;
+
   const dispatch = createEventDispatcher();
 
   const update = event => {
-    console.log(event);
-    dispatch("update", { title, data: event.data });
+    dispatch("update", { title, data: event.target.value });
   };
 </script>
 
-<div class="Card bg-primary-dark mt-4 max-w-xs mx-auto rounded-lg p-4">
+<div
+  class="Card mt-10 p-4 relative bg-primary-dark max-w-xs mx-auto rounded-lg">
   <h2 class="text-center text-primary text-3xl font-bold uppercase">{title}</h2>
   <input
-    class="border-none bg-transparent mx-auto w-full text-6xl text-white
-    text-center"
+    class="mx-auto border-none bg-transparent w-full text-10xl text-white
+    font-bold text-center"
     type="number"
+    bind:value
     on:input={update}
     step="1"
+    placeholder="..."
     min="1" />
-  <span class="absolute">{unit}</span>
+  <span
+    class="absolute text-primary text-6xl -right-6px bottom-0 uppercase
+    font-bold"
+    style="line-height: 0.7;">
+    {unit}
+  </span>
 </div>
