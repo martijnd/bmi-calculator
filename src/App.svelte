@@ -56,4 +56,5 @@
       <Result {bmi} />
     </div>
   </div>
+  <span class="text-theme-red text-theme-orange text-theme-green" />
 </div>
