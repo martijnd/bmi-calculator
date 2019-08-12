@@ -49,7 +49,9 @@
   <div class="footer bg-footer p-6">
     <div class="container text-center mx-auto text-footer-text uppercase">
       Gemaakt door
-      <a href="https://martijnd.dev/" target="_blank">Martijn Dorsman</a>
+      <a href="https://martijnd.dev/" rel="noopener" target="_blank">
+        Martijn Dorsman
+      </a>
       &copy; {new Date().getFullYear()}
     </div>
   </div>

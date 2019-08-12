@@ -15,8 +15,13 @@
 
 <div
   class="Card mt-10 p-4 relative bg-primary-dark max-w-xs mx-auto rounded-lg">
-  <h2 class="text-center text-primary text-3xl font-bold uppercase">{title}</h2>
+  <label
+    class="text-center text-primary text-3xl font-bold uppercase"
+    for={title}>
+    {title}
+  </label>
   <input
+    id={title}
     class="mx-auto border-none bg-transparent w-full text-10xl text-white
     font-bold text-center"
     type="number"

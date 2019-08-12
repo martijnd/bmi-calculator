@@ -69,6 +69,7 @@
   </div>
   <a
     href="https://www.berekenen.nl/bmi#algemeen"
+    rel="noopener"
     class="absolute -bottom-10px inset-x-0 py-2 text-sm bg-primary-dark mx-4
     text-light-text rounded-lg">
     Meer over gezond gewicht
