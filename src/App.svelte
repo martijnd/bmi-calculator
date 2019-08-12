@@ -31,6 +31,15 @@
       bmi = roundValue(+weight / (+height / 100) ** 2);
     }
   };
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("service-worker.js", { scope: "./" })
+      .then(registration => {})
+      .catch(error => {
+        console.log(error);
+      });
+  }
 </script>
 
 <div class="bg-primary antialiased">
