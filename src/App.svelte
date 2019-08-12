@@ -38,7 +38,7 @@
   };
 </script>
 
-<div class="w-screen bg-primary antialiased">
+<div class="bg-primary antialiased">
   <div class="container mx-auto p-6 mb-24">
     <h1
       class="text-yellow-500 text-center text-3xl uppercase font-bold"
@@ -51,7 +51,7 @@
     <Card title="Leeftijd" unit="jaar" on:update={updateBMI} />
 
   </div>
-  <div class="w-screen bg-light-text">
+  <div class="bg-light-text">
     <div class="container mx-auto p-6">
       <Result {bmi} />
     </div>
