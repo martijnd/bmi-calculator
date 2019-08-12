@@ -2,33 +2,27 @@
   import Card from "./Card.svelte";
   import Result from "./Result.svelte";
 
-  let weight;
-  let height;
-  let age;
-  let gender;
-  let bmi;
+  let weight, height, age, gender, bmi;
 
-  const roundValue = value => {
-    return Math.round(value * 10) / 10;
-  };
+  const roundValue = value => Math.round(value * 10) / 10;
 
   const updateBMI = event => {
-    const { title, data } = event.detail;
+    const { title, value } = event.detail;
 
     switch (title.toLowerCase()) {
       case "gewicht":
-        weight = data;
+        weight = value;
         break;
       case "leeftijd":
-        age = data;
+        age = value;
         break;
       case "lengte":
-        height = data;
+        height = value;
         break;
       case "geslacht":
-        gender = data;
+        gender = value;
       default:
-        console.error("wrong data type returned: ", event);
+        console.error("wrong data type returned:", event);
         break;
     }
 
@@ -58,7 +52,9 @@
   </div>
   <div class="footer bg-footer p-6">
     <div class="container text-center mx-auto text-footer-text uppercase">
-      Martijn Dorsman &copy; {new Date().getFullYear()}
+      Gemaakt door
+      <a href="https://martijnd.dev/" target="_blank">Martijn Dorsman</a>
+      &copy; {new Date().getFullYear()}
     </div>
   </div>
 </div>

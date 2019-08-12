@@ -68,7 +68,7 @@
     <img class="absolute -top-6px left-1" src="quote.svg" alt="quote" />
   </div>
   <a
-    href="/"
+    href="https://www.berekenen.nl/bmi#algemeen"
     class="absolute -bottom-10px inset-x-0 py-2 text-sm bg-primary-dark mx-4
     text-light-text rounded-lg">
     Meer over gezond gewicht

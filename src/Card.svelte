@@ -9,7 +9,7 @@
   const dispatch = createEventDispatcher();
 
   const update = event => {
-    dispatch("update", { title, data: event.target.value });
+    dispatch("update", { title, value: event.target.value });
   };
 </script>
 
