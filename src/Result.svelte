@@ -1,6 +1,7 @@
 <script>
   export let bmi = "&nbsp;";
   let color = "green";
+
   const subtitles = {
     blank: "Vul je gegevens in!",
     purple: "Je bent veel te licht voor je lengte",
@@ -25,6 +26,12 @@
       "Daardoor heb je een veel grotere kans op bepaalde ziekten, dan mensen van dezelfde leeftijd met een lager, gezond gewicht."
   };
 
+  const classNames = {
+    green: "text-theme-green",
+    orange: "text-theme-orange",
+    red: "text-theme-red"
+  };
+
   const getWeightValues = bmi => {
     switch (true) {
       case bmi < 25:
@@ -38,15 +45,15 @@
     }
   };
 
-  $: classes = `text-theme-${getWeightValues(bmi)} font-bold text-6xl`;
+  $: classes = `${classNames[getWeightValues(bmi)]} font-bold text-6xl`;
 </script>
 
 <div
   class="Result relative -mt-24 mx-auto bg-primary-dark text-center max-w-xs
   rounded-lg">
-  <div class="top p-6">
+  <div class="top p-6 relative z-10">
     <h2 class="text-3xl text-primary font-bold">Jouw BMI is</h2>
-    <hr class="border-primary mt-6 w-12" />
+    <hr class="mt-6 border-primary w-12" />
     <span class={classes}>
       {@html bmi}
     </span>
@@ -56,15 +63,15 @@
   </div>
   <div
     class="bottom relative bg-primary text-light-text p-8 italic text-lg
-    font-light rounded-b-lg">
+    font-light rounded-b-lg z-0 overflow-hidden">
     {descriptions[getWeightValues(bmi)]}
-    <img class="absolute top-0 left-1" src="quote.svg" alt="quote" />
-    <a
-      href="/"
-      class="absolute -bottom-10px inset-x-0 py-2 text-sm bg-primary-dark mx-4
-      text-light-text rounded-lg">
-      Meer over gezond gewicht
-      <img src="launch.svg" alt="launch" class="inline" />
-    </a>
+    <img class="absolute -top-6px left-1" src="quote.svg" alt="quote" />
   </div>
+  <a
+    href="/"
+    class="absolute -bottom-10px inset-x-0 py-2 text-sm bg-primary-dark mx-4
+    text-light-text rounded-lg">
+    Meer over gezond gewicht
+    <img src="launch.svg" alt="launch" class="inline" />
+  </a>
 </div>

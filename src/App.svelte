@@ -58,8 +58,7 @@
   </div>
   <div class="footer bg-footer p-6">
     <div class="container text-center mx-auto text-footer-text uppercase">
-      Gerealiseerd door Martijn Dorsman &copy; 2019
+      Martijn Dorsman &copy; {new Date().getFullYear()}
     </div>
   </div>
-  <span class="text-theme-red text-theme-orange text-theme-green" />
 </div>
