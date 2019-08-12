@@ -1,0 +1,26 @@
+{
+  "name": "BMI Calculator",
+  "short_name": "BMI",
+  "background_color": "#5A44A2",
+  "theme_color": "#5A44A2",
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "ios-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./"
+}

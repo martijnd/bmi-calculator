@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Martijn Dorsman" />
+    <meta name="title" content="BMI Calculator" />
+    <meta
+      name="description"
+      content="A simple tool to calculate your Body Mass Index"
+    />
+    <meta name="keywords" content="bmi,calculator,web,app" />
+    <meta name="theme-color" content="#5A44A2" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="ios-icon.png" />
+
+    <title>BMI Calculator</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="bundle.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <script defer src="bundle.js"></script>
+    <script defer>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js", { scope: "./" })
+          .then(registration => {})
+          .catch(error => {
+            console.log(error);
+          });
+      }
+    </script>
+  </head>
+
+  <body>
+    <noscript>Please enable JavaScript</noscript>
+  </body>
+</html>
