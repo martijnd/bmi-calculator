@@ -57,7 +57,7 @@
     <span class={classes}>
       {@html bmi}
     </span>
-    <div class="subtitle text-light-text font-bold">
+    <div class="subtitle mt-2 text-light-text font-bold">
       {subtitles[getWeightValues(bmi)]}
     </div>
   </div>
