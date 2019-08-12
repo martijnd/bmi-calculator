@@ -15,7 +15,9 @@ module.exports = {
         "theme-green": "#75AA6C",
         "theme-orange": "#E1AD27",
         "theme-red": "#D24444",
-        "light-text": "#B1A5D9"
+        "light-text": "#B1A5D9",
+        footer: "#DCDCDC",
+        "footer-text": "#8C8C8C"
       }
     }
   },

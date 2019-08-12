@@ -46,14 +46,19 @@
       Bereken je
       <span class="block text-8xl">BMI</span>
     </h1>
+    <Card title="Leeftijd" unit="jaar" on:update={updateBMI} />
     <Card title="Gewicht" unit="kg" on:update={updateBMI} />
     <Card title="Lengte" unit="cm" on:update={updateBMI} />
-    <Card title="Leeftijd" unit="jaar" on:update={updateBMI} />
 
   </div>
   <div class="bg-light-text">
     <div class="container mx-auto p-6">
       <Result {bmi} />
+    </div>
+  </div>
+  <div class="footer bg-footer p-6">
+    <div class="container text-center mx-auto text-footer-text uppercase">
+      Gerealiseerd door Martijn Dorsman &copy; 2019
     </div>
   </div>
   <span class="text-theme-red text-theme-orange text-theme-green" />
