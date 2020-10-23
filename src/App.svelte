@@ -3,29 +3,14 @@
   import Result from "./Result.svelte";
   import Header from "./Header.svelte";
 
-  let weight, height, age, gender, bmi;
+  let weight, height, bmi;
 
   const roundValue = value => Math.round(value * 10) / 10;
 
   const updateBMI = event => {
     const { title, value } = event.detail;
 
-    switch (title.toLowerCase()) {
-      case "gewicht":
-        weight = value;
-        break;
-      case "leeftijd":
-        age = value;
-        break;
-      case "lengte":
-        height = value;
-        break;
-      case "geslacht":
-        gender = value;
-      default:
-        console.error("wrong data type returned:", event);
-        break;
-    }
+    title.toLowerCase() === "gewicht" ? (weight = value) : (height = value);
 
     if (weight && height && +height > 100) {
       bmi = roundValue(+weight / (+height / 100) ** 2);
@@ -36,7 +21,6 @@
 <div class="bg-primary antialiased">
   <div class="container mx-auto p-6 mb-24">
     <Header />
-    <Card title="Leeftijd" unit="jaar" on:update={updateBMI} />
     <Card title="Gewicht" unit="kg" on:update={updateBMI} />
     <Card title="Lengte" unit="cm" on:update={updateBMI} />
 
